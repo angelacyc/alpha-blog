@@ -1,2 +1,72 @@
+$navbar-default-bg: black; 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left; 
+  font-size:1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -lpx;
+  font-weight: bold;
+  
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  /* background-image: asset-url('FHL.png'); */
+  background: asset-url('jumbotron.gif') no-repeat center center;
+      background-size: cover;
+      padding-left: 0px;
+      padding-top: 3px;
+      //padding-bottom: 3px;
+      // padding-top: 20%;
+      //padding-bottom: 20%;
+ // background-size: 200px 65px;
+ font-family: "Book Antiqua";
+  height: 500px;
+}
+
+.jumbotron h1 {
+  color: yellow;
+  font-size: 100px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  //text-align: centre; 
+  margin-top: 0px; 
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+footer {
+    maring-top: 45px; 
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
