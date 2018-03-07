@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
-  
+  get 'lesson', to: 'lessons#main'  
+  get 'video', to: 'videos#main'
+  get 'game', to: 'games#main'  
+  get 'song', to: 'songs#main'
+
   resources :articles
 
   # Example of regular route:

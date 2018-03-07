@@ -1,11 +1,13 @@
-$navbar-default-bg: black; 
+$navbar-default-bg: maroon; 
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
 #logo {
   float: left; 
-  font-size:1.7em;
+  font-size:1.2em;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -lpx;
@@ -27,7 +29,7 @@ $navbar-default-bg: black;
   background: asset-url('jumbotron.gif') no-repeat center center;
       background-size: cover;
       padding-left: 0px;
-      padding-top: 3px;
+     margin-top: 30px;
       //padding-bottom: 3px;
       // padding-top: 20%;
       //padding-bottom: 20%;
@@ -39,22 +41,28 @@ $navbar-default-bg: black;
 .jumbotron h1 {
   color: yellow;
   font-size: 100px;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   //text-align: centre; 
-  margin-top: 0px; 
+  margin-top: 300px; 
   letter-spacing: -1px;
   font-weight: bold;
 }
 
 footer {
-    maring-top: 45px; 
+    margin-top: 45px; 
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
-    color: #777;
+    color: black;
+    text-align:center;
+    font-style: italic;
+}
+
+footer a {
+  color: red; 
 }
 
 footer a:hover {
-  color: #222;
+  color: #555;
 }
 
 footer small {
@@ -69,4 +77,42 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
