@@ -1,4 +1,6 @@
 
+ <div class= flash>
   <% flash.each do |name, msg| %>
-    <%= content_tag(:label, msg, :class=> "flash") %>
+    <%= content_tag(:label, msg) %>
   <% end %>
+  </div>

@@ -243,7 +243,17 @@ h3,h4 {
 .flash {
   text-align: center;
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 20px;
   font-size: 30px;
   font-family: "Trebuchet MS"; 
+  background-color: #BEFCEF  ;
+}
+
+.error {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  font-size: 17px;
+  font-family: "Trebuchet MS"; 
+  background-color: #FCE4BE  ;
 }

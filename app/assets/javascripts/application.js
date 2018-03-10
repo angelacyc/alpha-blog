@@ -17,7 +17,9 @@
 //= require_tree .
 
 var string = [ "Good", "Right", "Correct", "Very Good", "Awesome"]
+var wrong_str = ["Oops, not this, try again for Day ", "Wrong again for Day ", "Sorry, keep trying for Day "]
 var gameCompleted = false;
+var wrong_str_index = 0; 
 
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -45,6 +47,7 @@ function mouseClickFn(img) {
     var day = document.getElementById("h1Day").innerHTML.substr(-1);
     var string_index = day-1; 
 
+
     if (day == img)
     {
         document.getElementById("imgMas").src = ("/assets/creation/"+img+".jpg");
@@ -57,7 +60,7 @@ function mouseClickFn(img) {
         {
             
             day++; 
-            
+            wrong_str_index = 0; 
             document.getElementById("h1Day").innerHTML = (string[(string_index)] + ', How About Day ' + (day));
             
             //document.getElementById("imgMas").src ="";
@@ -65,7 +68,13 @@ function mouseClickFn(img) {
     }
     else
     {
-        validateResult(false);
+        document.getElementById("h1Day").innerHTML = (wrong_str[wrong_str_index] + (day));
+        wrong_str_index ++; 
+        if (wrong_str_index == wrong_str.length )
+        {
+            wrong_str_index = 0;
+        }
+
     }
     return;
     
