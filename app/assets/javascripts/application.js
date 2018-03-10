@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
+var string = [ "Good", "Right", "Correct", "Very Good", "Awesome"]
 var gameCompleted = false;
 
 function openTab(evt, tabName) {
@@ -40,7 +41,9 @@ function mouseClickFn(img) {
         return;
     }
     
-    var day = document.getElementById("h1Day").innerHTML.substring(4,5);
+
+    var day = document.getElementById("h1Day").innerHTML.substr(-1);
+    var string_index = day-1; 
 
     if (day == img)
     {
@@ -48,12 +51,16 @@ function mouseClickFn(img) {
         if (day ==6)
         {
             gameCompleted = true;
-            document.getElementById("h1Day").innerHTML = "Good Job !";
+             document.getElementById("h1Day").innerHTML = ('You Got It, Good Job!');
         }
         else 
         {
+            
             day++; 
-            document.getElementById("h1Day").innerHTML = ('Day ' + (day));
+            
+            document.getElementById("h1Day").innerHTML = (string[(string_index)] + ', How About Day ' + (day));
+            
+            //document.getElementById("imgMas").src ="";
         }
     }
     else
