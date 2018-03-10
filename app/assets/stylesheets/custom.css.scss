@@ -230,9 +230,9 @@ h3,h4 {
   margin-top: 15px;
 }
 .navLogo {
-  position: absolute;
-  left: 500px;
-  right: 500px;
+ position: absolute;
+  top: 0; bottom:0; left: 0; right:0;
+  margin: auto;
   width: 10%;
 }
 
@@ -240,4 +240,12 @@ h3,h4 {
   position: relative;
   top: 0;
   left: 0;
+}
+
+.flash {
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 30px;
+  font-family: "Trebuchet MS"; 
 }

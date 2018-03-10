@@ -1,6 +1,4 @@
 
   <% flash.each do |name, msg| %>
-    <ul> 
-      <li><%=msg %></li>
-    </ul>
+    <%= content_tag(:label, msg, :class=> "flash") %>
   <% end %>
