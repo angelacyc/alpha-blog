@@ -16,8 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-
-
+var gameCompleted = false;
 
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -31,4 +30,62 @@ function openTab(evt, tabName) {
     }
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
+}
+
+
+function mouseClickFn(img) {
+
+    if (gameCompleted)
+    {
+        return;
+    }
+    
+    var day = document.getElementById("h1Day").innerHTML.substring(4,5);
+
+    if (day == img)
+    {
+        document.getElementById("imgMas").src = ("/assets/creation/"+img+".jpg");
+        if (day ==6)
+        {
+            gameCompleted = true;
+            document.getElementById("h1Day").innerHTML = "Good Job !";
+        }
+        else 
+        {
+            day++; 
+            document.getElementById("h1Day").innerHTML = ('Day ' + (day));
+        }
+    }
+    else
+    {
+        validateResult(false);
+    }
+    return;
+    
+    switch(img) {
+    case 1:
+        if (document.getElementById("h1Day").innerHTML.includes(img) )
+        {
+            validateResult(true);
+            document.getElementById("imgMas").src = "creation.bmp";
+            document.getElementById("h1Day").innerHTML = "Day 2";
+            return;
+        }
+        break;
+    case 2:
+        if (document.getElementById("h1Day").innerHTML.includes(img))
+        validateResult(true);
+        return;
+    default:
+        break;
+    }
+    validateResult(false);
+}
+
+function validateResult (result) {
+    if(result == false)
+    {
+       alert("It was wrong, try again");
+    }
+  
 }

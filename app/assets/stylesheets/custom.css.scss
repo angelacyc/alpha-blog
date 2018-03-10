@@ -24,6 +24,7 @@ $navbar-default-bg: maroon;
   text-align: center;
 }
 
+
 .jumbotron {
   /* background-image: asset-url('FHL.png'); */
   background: asset-url('jumbotron.gif') no-repeat center center;
@@ -36,6 +37,7 @@ $navbar-default-bg: maroon;
  // background-size: 200px 65px;
  font-family: "Book Antiqua";
   height: 500px;
+  width: 1200;
 }
 
 .jumbotron h1 {
@@ -115,4 +117,52 @@ footer ul li {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+div.top {
+  position: relative; 
+  width: 300px;
+  height: 200px; 
+  border: 3px solid #73AD21;
+
+}
+div.left {
+  position: relative; 
+  
+}
+
+.imgMaster {
+  display: block;
+  border: 3px solid black;
+  height: 216px;
+  width:384px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imgRandom {
+  height: 130px;
+  width: 230px;
+  margin-left: 20px;
+  margin-right: 15px; 
+}
+
+.imgRandomTop {
+  margin-top: 40px; 
+ 
+}
+
+
+.imgTitle {
+  font-weight: bold;
+  width: 80px;
+
+}
+
+
+#h1Day {
+  text-align: center;
+  font-weight: bold;
 }
