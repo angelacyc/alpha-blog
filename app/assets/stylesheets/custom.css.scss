@@ -26,9 +26,9 @@ $navbar-default-bg: maroon;
 
 .fhlLogo {
   position: absolute; 
-  top: 320px;
+  bottom: 50px;
   left: 50px;
-  width: 30%;
+  width: 35%;
 }
 .jumbotron {
   /* background-image: asset-url('FHL.png'); */
@@ -138,6 +138,13 @@ div.left {
   position: relative; 
   
 }
+h3 {
+  font-weight: bold;
+}
+h3,h4 {
+    text-align: center;
+    font-family: "Comic Sans MS";
+}
 
 .imgMaster {
   display: block;
@@ -162,6 +169,10 @@ div.left {
  
 }
 
+.imgRandomBottom {
+  margin-bottom: 40px; 
+ 
+}
 
 .imgTitle {
   font-weight: bold;
@@ -173,4 +184,59 @@ div.left {
 #h1Day {
   text-align: center;
   font-weight: bold;
+}
+
+.aboutImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 25px;
+  width: 20%;
+}
+
+.aboutName {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+  color: red;
+}
+
+.descName {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+}
+
+.aboutMP {
+  margin-top: 15px;
+  font-weight: bold;
+  font-family: "Trebuchet MS";  
+  font-size: 20px;
+  
+}
+
+.aboutP ul li {
+  float: left;
+  margin-left: 15px;
+  font-family: "Trebuchet MS";  
+}
+
+.videoF {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+  margin-top: 15px;
+}
+.navLogo {
+  position: absolute;
+  left: 500px;
+  width: 10%;
+}
+
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
 }

@@ -1,6 +1,9 @@
 
 <div class="imgDis">
-  
+
+<h3> Game Description</h3> 
+<h4> God created the world in 6 days. Click the image that God created on a particular day.</h4>
+
 <!-- EXPERIMENT 1 -->
 <%# get_random_image.each do |id| %> 
 <%#image_path_prefix = "/assets/creation/"%>
@@ -20,9 +23,12 @@
 <%# count = count + 1 %> 
 <%# end %> 
 
+<!-- randomize images -->
 <% count = 0 %> 
 <% image_path_prefix = "/assets/creation/"%>
 <% image = get_random_img() %>  
+
+<!-- establish top images -->
 <% 3.times do %>
 <% id = image[count][0].slice(0) %>
 <% idStr =  "img" + id.to_s %> 
@@ -30,13 +36,16 @@
 <%= content_tag(:label, image[count][1], :class=> "imgTitle") %>
 <% count= count + 1 %> 
 <% end %> 
+
+<!-- establish main image -->
 <h1 id="h1Day">Day 1</h1>
 <%= image_tag("",  :alt =>'', :id=> "imgMas" , :class=> "imgMaster" ) %>
 
+<!-- establish bottom image -->
 <% 3.times do %>
 <% id = image[count][0].slice(0) %>
 <% idStr =  "img" + id.to_s %> 
-<%= image_tag("#{image_path_prefix}#{image[count][0]}",  :alt =>'',  :id=> "#{idStr}" , :class=> "imgRandom", :onClick =>"mouseClickFn(#{id})" ) %>
+<%= image_tag("#{image_path_prefix}#{image[count][0]}",  :alt =>'',  :id=> "#{idStr}" , :class=> "imgRandom imgRandomBottom", :onClick =>"mouseClickFn(#{id})" ) %>
 <%= content_tag(:label, image[count][1], :class=> "imgTitle") %>
 <% count= count + 1 %> 
 <% end %> 
