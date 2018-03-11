@@ -1,20 +1,53 @@
-<p class="aboutMP">Our Mission:</p>
-<p class="aboutP">
- 
-<ul> 
-  <li>Sharing biblical resources for children around the world</li>
-  <li>Equipping Children with knowledge of the Bible</li>
-  <li>Cultivate interest in bible lessons through games and videos</li>
-</ul>
-</p>
-<p class="aboutMP">Our Team:</p>
-<%= image_tag("/assets/sadhish_consultant.jpg",  :alt =>'', :class=> "aboutImg" ) %>
-<p class="aboutName"> Sadhishkhanna Vijaya Balan</p>
-<p class="descName"> The Consultant</p>
+<div class="container-fluid"
+  <div class="col-sm-10">
+    <p class="aboutMP">Our Mission:</p>
+    <p class="aboutP">
+      <ul> 
+        <li>Sharing biblical resources for children around the world</li>
+        <li>Equipping Children with knowledge of the Bible</li>
+        <li>Cultivate interest in bible lessons through games and videos</li>
+      </ul>
+    </p>
+  </div>
 
-<%= image_tag("/assets/angela.jpg",  :alt =>'', :class=> "aboutImg" ) %>
-<p class="aboutName"> Angela Chung</p>
-<p class="descName"> The designer</p>
+  <div class="col-sm-10">
+    <p class="aboutMP">Our Team:</p>
+  </div> 
+  <div class="aboutMP">
+    <div class="col-sm-12">
+      <div class="row">
+        <div class = "col-sm-2">
+          <%= image_tag("/assets/sadhish_consultant.jpg",  :alt =>'', :class=> "aboutImg" ) %>
+        </div>
+        <div class = "col-sm-6">
+          <p class="aboutName"> Sadhishkhanna Vijaya Balan</p>
+          <p class="aboutDesc"> The Consultant</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-10">
+      <p class="aboutMP"> </p>
+    </div> 
+    <div class="aboutMP">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class = "col-sm-2">
+            <%= image_tag("/assets/angela.jpg",  :alt =>'', :class=> "aboutImg" ) %>
+          </div>
+          <div class = "col-sm-6">
+            <p class="aboutName"> Angela Chung</p>
+            <p class="aboutDesc"> The Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="col-sm-offset-4 col-sm-10">
+  <%= link_to "Return to Home" , root_path, class: 'btn-primary btn-lg r-home ' %> 
+</div>
 
 
 

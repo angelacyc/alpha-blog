@@ -1,7 +1,8 @@
 class VideosController < ApplicationController
 
-    def main
-    end
+  def main
+
+  end
 
 
 end

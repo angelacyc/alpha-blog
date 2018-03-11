@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
        <ul class="nav navbar-nav">
         <!-- <li><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-        <li><%= link_to "Contact Us", '#', class: "navbar-brand", id: "logo" %></li>
+        <li><%= link_to "Contact Us", contact_path, class: "navbar-brand", id: "logo" %></li>
       </ul>
       
       <%= image_tag("/assets/logo.png",  :alt =>'', :class=> "navLogo" ) %>
@@ -32,8 +32,12 @@
         <!--<button type="submit" class="btn btn-default">Submit</button> -->
       </form>
       <ul class="nav navbar-nav navbar-right">
-         <%= link_to "Login", root_path, class: "navbar-brand", id: "logo" %>
-         <%= link_to "Register", signup_path, class: "navbar-brand", id: "logo" %>
+         <% if logged_in? %> 
+           <%= link_to "Logout",logout_path, class: "navbar-brand", method: :delete, id: "logo" %>
+         <% else %> 
+           <%= link_to "Login",login_path, class: "navbar-brand", id: "logo" %>
+           <%= link_to "Sign Up", signup_path, class: "navbar-brand", id: "logo" %>
+         <% end %> 
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>

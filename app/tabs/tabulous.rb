@@ -7,8 +7,9 @@ Tabulous.setup do
       link_path     { root_path }
       visible_when  { true }
       enabled_when  { true }
-       active_when   { in_action('any').of_controller('pages') }
+       active_when   { in_action('home').of_controller('pages') }
     end
+
     
     games_tab do
       text          { 'Game' }
@@ -26,7 +27,6 @@ Tabulous.setup do
        active_when   { in_action('any').of_controller('videos') }
     end
     
- 
 
     lessons_tab do
       text          { 'Lesson' }
@@ -35,14 +35,9 @@ Tabulous.setup do
       enabled_when  { true }
        active_when   { in_action('any').of_controller('lessons') }
     end  
+ 
     
-    articles_tab do
-      text          { 'Article' }
-      link_path     { articles_path }
-      visible_when  { true }
-      enabled_when  { true }
-       active_when   { in_action('any').of_controller('articles') }
-    end   
+ 
       
   end
 

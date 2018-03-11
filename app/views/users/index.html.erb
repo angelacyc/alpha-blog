@@ -1,0 +1,19 @@
+
+<h1 align="center"> Listing All User </h1>
+
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>        
+    </tr>
+  
+  <% @user.each do |user| %>
+  <tr>
+      <td><%=user.username %></td>
+      <td><%=user.email %></td>
+      <td><%=user.password %></td>      
+  </tr>
+  <% end %>
+</table>
+

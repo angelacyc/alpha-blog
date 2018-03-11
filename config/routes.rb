@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
   get 'lesson', to: 'lessons#main'  
   get 'video', to: 'videos#main'
   get 'game', to: 'games#main'  
@@ -15,6 +16,10 @@ Rails.application.routes.draw do
   #post 'users', to: 'users#create' 
   resources :users, except: [:new]
   resources :articles
+  
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
